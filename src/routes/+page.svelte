@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Counter from './Counter.svelte';
+	import Counter from '$lib/components/Counter.svelte';
 	import welcome from '$lib/images/svelte-welcome.webp';
 	import welcomeFallback from '$lib/images/svelte-welcome.png';
 	import { Avatar } from '@skeletonlabs/skeleton';
@@ -13,30 +13,12 @@
 </svelte:head>
 
 <section>
-	<h1>
-		<span class="welcome">
-		</span>
+	<h1 class="h1">Bienvenue sur ce magnifique site</h1>
+	<h3 class="h3 text-center p-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi aperiam quod deserunt veniam odio nemo officiis! Recusandae architecto asperiores facilis facere consectetur maiores necessitatibus hic dicta aliquid. Aut, saepe nihil!</h3>
 
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Accordion>
-		<AccordionItem open>
-			<svelte:fragment slot="lead">(icon)</svelte:fragment>
-			<svelte:fragment slot="summary">(summary)</svelte:fragment>
-			<svelte:fragment slot="content">(content)</svelte:fragment>
-		</AccordionItem>
-		<AccordionItem>
-			<svelte:fragment slot="lead">(icon)</svelte:fragment>
-			<svelte:fragment slot="summary">(summary)</svelte:fragment>
-			<svelte:fragment slot="content">(content)</svelte:fragment>
-		</AccordionItem>
-		<!-- ... -->
-	</Accordion>
+	<button class="inline-block cursor-pointer rounded-md bg-green-600 px-4 py-3 text-center text-2xl shadow-xl shadow-gray-400 font-semibold uppercase text-white transition duration-200 ease-in-out hover:bg-green-700 mt-10">
+	Play
+	</button>
 
 </section>
 
@@ -47,17 +29,5 @@
 		justify-content: center;
 		align-items: center;
 		flex: 0.6;
-	}
-
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
 	}
 </style>

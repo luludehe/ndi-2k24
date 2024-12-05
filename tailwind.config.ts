@@ -19,5 +19,5 @@ export default {
 		extend: {}
 	},
 
-	plugins: [typography, forms, containerQueries, skeleton({themes: { preset: [ "skeleton" ] }})]
+	plugins: [typography, forms, containerQueries, skeleton({themes: { preset: [ "skeleton" ] }}), require('daisyui')]
 } satisfies Config;
