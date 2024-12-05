@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Counter from '$lib/components/Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
+	import welcome from 'lib/images/svelte-welcome.webp';
 	import welcomeFallback from '$lib/images/svelte-welcome.png';
 	import { Avatar } from '@skeletonlabs/skeleton';
 	import { Accordion, AccordionItem } from '@skeletonlabs/skeleton';
