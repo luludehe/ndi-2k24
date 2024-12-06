@@ -85,7 +85,7 @@
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
-      background-image: url("src/lib/images/landing_background.jpg");
+      background-image: url("$lib/images/landing_background.jpg");
   }
 
 	section {

@@ -209,12 +209,12 @@ function updateTileSize() {
 }
 
 function preload(this: Phaser.Scene) {
-	this.load.image('ocean', 'src/lib/game/assets/game-background.png');
-	this.load.image('empty', 'src/lib/game/assets/empty_pipe.png');
-	this.load.image('straight', 'src/lib/game/assets/straight.png');
-	this.load.image('tee', 'src/lib/game/assets/T.png');
-	this.load.image('cross', 'src/lib/game/assets/cross.png');
-	this.load.image('bend', 'src/lib/game/assets/bend.png');
+	this.load.image('ocean', '$lib/game/assets/game-background.png');
+	this.load.image('empty', '$lib/game/assets/empty_pipe.png');
+	this.load.image('straight', '$lib/game/assets/straight.png');
+	this.load.image('tee', '$lib/game/assets/T.png');
+	this.load.image('cross', '$lib/game/assets/cross.png');
+	this.load.image('bend', '$lib/game/assets/bend.png');
 }
 
 function create(this: Phaser.Scene) {

@@ -33,7 +33,7 @@
         background-size: cover;
 				background-repeat: no-repeat;
 				background-position: center;
-        background-image: url("src/lib/images/background-large.jpg");
+        background-image: url("$lib/images/background-large.jpg");
     }
 
     #phaser-container {
