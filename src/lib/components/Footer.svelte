@@ -14,12 +14,12 @@
 		<p>Copyright © {new Date().getFullYear()} - All right reserved</p>
 	</aside>
 	<nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
-		<a>
-			<img
-				src="/src/lib/images/github.svg"
-				alt="github"
-				height="24"
-				width="24" />
-		</a>
+<!--		<a>-->
+<!--			<img-->
+<!--				src="src/lib/images/github.svg"-->
+<!--				alt="github"-->
+<!--				height="24"-->
+<!--				width="24" />-->
+<!--		</a>-->
 	</nav>
 </footer>
