@@ -16,7 +16,7 @@
 	<nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
 		<a>
 			<img
-				src="src/lib/images/github.svg"
+				src="/src/lib/images/github.svg"
 				alt="github"
 				height="24"
 				width="24" />
