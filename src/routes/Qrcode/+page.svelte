@@ -109,19 +109,19 @@
 
 <section>
 
-	<h1 class="h1 text-gray-800">Générateur de QrCode Pokémon</h1>
+	<h1 class="h1 text-gray-800 font-bold">Générateur de QrCode Pokémon</h1>
 
 	<div class="w-full mx-auto my-16 flex self-center justify-center">
 		<label class="form-control min-w-96 max-w-xs">
 			<div class="label">
-				<span class="label-text text-gray-600">Entrez votre lien</span>
+				<span class="label-text text-md font-bold text-gray-800">Entrez votre lien</span>
 			</div>
 			<input id="link" type="url" bind:value={userLink} placeholder="https://example.com" class="bg-slate-50 input input-bordered w-full max-w-xs mx-auto" />
 		</label>
 	</div>
 
 
-	<h2 class="text-gray-800 mb-8">Choisissez un pokémon:</h2>
+	<h2 class="text-gray-800 font-bold text-xl mb-8">Choisissez un pokémon:</h2>
 
 	<div class="columns-3 ...">
 		{#each pokemons as { name, image }}

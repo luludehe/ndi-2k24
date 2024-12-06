@@ -49,8 +49,8 @@
 </svelte:head>
 
 <section>
-	<h1 class="h1 text-gray-800">Bienvenue sur notre jeu !</h1>
-	<h3 class="h3 text-gray-600 text-center p-5">Ce jeu a été réalisé lors de la Nuit de l'Info 2024. Nous vous invitons à jouer un jeu où le but est de s'assurer du bon écoulement du fluide en créant les connexions entre les tuyaux.</h3>
+	<h1 class="h1 text-white">Bienvenue sur notre jeu !</h1>
+	<h3 class="h3 text-gray-50 text-center p-5">Ce jeu a été réalisé lors de la Nuit de l'Info 2024. Nous vous invitons à jouer un jeu où le but est de s'assurer du bon écoulement du fluide en créant les connexions entre les tuyaux.</h3>
 
 	<button on:click={()=>pseudo_modal.showModal()} class="inline-block cursor-pointer rounded-md bg-green-600 px-4 py-3 text-center text-2xl shadow-xl shadow-gray-400 font-semibold uppercase text-white transition duration-200 ease-in-out hover:bg-green-700 mt-10">
 	Jouer
@@ -81,11 +81,11 @@
 <style>
 
 	:global(.app) {
-			background-color: var(--color-bg-1) !important;
+			/*background-color: var(--color-bg-1) !important;*/
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
-      background-image: none;
+      background-image: url("src/lib/images/landing_background.jpg");
   }
 
 	section {
