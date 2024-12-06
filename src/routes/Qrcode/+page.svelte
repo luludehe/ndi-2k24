@@ -6,8 +6,8 @@
 	let selectedPokemon = '';
 	let qrCodeImage: string | null = null;
 	import BulbasaurImage from '$lib/images/image.png';
-	import CharmanderImage from '$lib/images/4.png';
-	import SquirtleImage from '$lib/images/7.png';
+	import CharmanderImage from '$lib/qrcode/salameche.png';
+	import SquirtleImage from '$lib/qrcode/carapuce.png';
 
 	const pokemons = [
 		{ name: 'Bulbasaur', image: BulbasaurImage },
@@ -77,46 +77,78 @@
 </script>
 
 <style>
-    .pokemon-list img {
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 0.6;
+    }
+
+    .pokemon-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 10px;
+    }
+
+    .pokemon-item {
         cursor: pointer;
+        text-align: center;
         transition: transform 0.2s ease-in-out;
     }
-    .pokemon-list img:hover {
+
+    .pokemon-item:hover {
         transform: scale(1.1);
     }
+
     .qr-code {
         margin-top: 20px;
     }
+
 </style>
 
-<h1>Pokémon QR Code Generator</h1>
+<section>
 
-<div>
-	<label for="link">Enter your link:</label>
-	<input id="link" type="url" bind:value={userLink} placeholder="https://example.com" />
-</div>
+	<h1 class="h1 text-gray-800">Générateur de QrCode Pokémon</h1>
 
-<h2>Select a Pokémon:</h2>
-<div class="pokemon-list">
-	{#each pokemons as { name, image }}
-		<img
-			src={image}
-			alt={name}
-			width="100"
-			height="100"
-			on:click={() => { selectedPokemon = name; }}
-			class:selected={selectedPokemon === name}
-		/>
-	{/each}
-</div>
-
-<button on:click={generateQRCode} disabled={!userLink || !selectedPokemon}>
-	Generate QR Code
-</button>
-
-{#if qrCodeImage}
-	<div class="qr-code">
-		<h2>Your Pokémon QR Code:</h2>
-		<img src={qrCodeImage} alt="QR Code" />
+	<div class="w-full mx-auto my-16 flex self-center justify-center">
+		<label class="form-control min-w-96 max-w-xs">
+			<div class="label">
+				<span class="label-text text-gray-600">Entrez votre lien</span>
+			</div>
+			<input id="link" type="url" bind:value={userLink} placeholder="https://example.com" class="bg-slate-50 input input-bordered w-full max-w-xs mx-auto" />
+		</label>
 	</div>
-{/if}
+
+
+	<h2 class="text-gray-800 mb-8">Choisissez un pokémon:</h2>
+
+	<div class="columns-3 ...">
+		{#each pokemons as { name, image }}
+			<div on:click={() => { selectedPokemon = name; }}>
+				<img class="pokemon-item"
+					src={image}
+					alt={name}
+					width="100"
+					height="100"
+					class:selected={selectedPokemon === name}
+				/>
+				<p>{name}</p>
+			</div>
+		{/each}
+	</div>
+
+	<div class="w-48 flexself-center justify-center">
+		<button on:click={generateQRCode} disabled={!userLink || !selectedPokemon} class="w-48 inline-block cursor-pointer rounded-md bg-cyan-600 px-4 py-3 text-center text-md shadow-xl shadow-gray-400 font-semibold uppercase text-white transition duration-200 ease-in-out hover:bg-cyan-700 mt-10">
+			Génération
+		</button>
+	</div>
+
+	{#if qrCodeImage}
+		<div class="qr-code">
+			<h2>Your Pokémon QR Code:</h2>
+			<img src={qrCodeImage} alt="QR Code" />
+		</div>
+	{/if}
+
+</section>

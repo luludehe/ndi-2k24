@@ -53,7 +53,7 @@
 	<h3 class="h3 text-gray-600 text-center p-5">Ce jeu a été réalisé lors de la Nuit de l'Info 2024. Nous vous invitons à jouer un jeu où le but est de s'assurer du bon écoulement du fluide en créant les connexions entre les tuyaux.</h3>
 
 	<button on:click={()=>pseudo_modal.showModal()} class="inline-block cursor-pointer rounded-md bg-green-600 px-4 py-3 text-center text-2xl shadow-xl shadow-gray-400 font-semibold uppercase text-white transition duration-200 ease-in-out hover:bg-green-700 mt-10">
-	Play
+	Jouer
 	</button>
 
 <!--	<button class="btn" on:click={()=>pseudo_modal.showModal()}>open modal</button>-->
